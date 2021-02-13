@@ -1,0 +1,76 @@
+{% extends 'base_layout.html' %}
+
+{% block title%}Today's Forecast{% endblock %}
+
+{%block content %} 
+<div class="container" id="accordion">
+  <h3 style="padding-bottom: 7px;" class="font-weight-light">Hourly Forecast for Today, </h3>
+  <p style="margin-top: -49px; margin-left: 310px; font-size: 26px;" id="demo"></p>
+  <div class="table-responsive">
+    <table class="table table-sm table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Temperature</th>
+          <th scope="col">Wind</th>
+          <th scope="col">Precipitation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">12:00 AM</th>
+          <td>{{TempFrcst.0}} °C</td>
+          <td>{{WindFrcst.0}} km/h</td>
+          <td>{{PrecpFrcst.0}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">3:00 AM</th>
+          <td>{{TempFrcst.1}} °C</td>
+          <td>{{WindFrcst.1}} km/h</td>
+          <td>{{PrecpFrcst.1}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">6:00 AM</th>
+          <td>{{TempFrcst.2}} °C</td>
+          <td>{{WindFrcst.2}} km/h</td>
+          <td>{{PrecpFrcst.2}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">9:00 AM</th>
+          <td>{{TempFrcst.3}} °C</td>
+          <td>{{WindFrcst.3}} km/h</td>
+          <td>{{PrecpFrcst.3}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">12:00 PM</th>
+          <td>{{TempFrcst.4}} °C</td>
+          <td>{{WindFrcst.4}} km/h</td>
+          <td>{{PrecpFrcst.4}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">3:00 PM</th>
+          <td>{{TempFrcst.5}} °C</td>
+          <td>{{WindFrcst.5}} km/h</td>
+          <td>{{PrecpFrcst.5}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">6:00 PM</th>
+          <td>{{TempFrcst.6}} °C</td>
+          <td>{{WindFrcst.6}} km/h</td>
+          <td>{{PrecpFrcst.6}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">9:00 PM</th>
+          <td>{{TempFrcst.7}} °C</td>
+          <td>{{WindFrcst.7}} km/h</td>
+          <td>{{PrecpFrcst.7}} %</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <hr style="height: 2px; border-width: 0; color: gray; background-color: gray">
+  <a style="margin-left: 390px;" href="{% url 'tomorrowWeather' %}" class="btn btn-secondary" role="button">NEXT DAY HOURLY FORECAST</a>
+  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+</div>
+<script src="/static/date.js"></script>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'base_layout.html' %}
+
+{% block title%}Today's Forecast{% endblock %}
+
+{%block content %} 
+<div class="container" id="accordion">
+  <h3 style="padding-top: 15px; padding-bottom: 7px;" class="font-weight-light">Hourly Forecast for Tomorrow</h3>
+  <div class="table-responsive">
+    <table class="table table-sm table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Temperature</th>
+          <th scope="col">Wind</th>
+          <th scope="col">Precipitation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">12:00 AM</th>
+          <td>{{TempFrcst.8}} °C</td>
+          <td>{{WindFrcst.8}} km/h</td>
+          <td>{{PrecpFrcst.8}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">3:00 AM</th>
+          <td>{{TempFrcst.9}} °C</td>
+          <td>{{WindFrcst.9}} km/h</td>
+          <td>{{PrecpFrcst.9}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">6:00 AM</th>
+          <td>{{TempFrcst.10}} °C</td>
+          <td>{{WindFrcst.10}} km/h</td>
+          <td>{{PrecpFrcst.10}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">9:00 AM</th>
+          <td>{{TempFrcst.11}} °C</td>
+          <td>{{WindFrcst.11}} km/h</td>
+          <td>{{PrecpFrcst.11}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">12:00 PM</th>
+          <td>{{TempFrcst.12}} °C</td>
+          <td>{{WindFrcst.12}} km/h</td>
+          <td>{{PrecpFrcst.12}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">3:00 PM</th>
+          <td>{{TempFrcst.13}} °C</td>
+          <td>{{WindFrcst.13}} km/h</td>
+          <td>{{PrecpFrcst.13}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">6:00 PM</th>
+          <td>{{TempFrcst.14}} °C</td>
+          <td>{{WindFrcst.14}} km/h</td>
+          <td>{{PrecpFrcst.14}} %</td>
+        </tr>
+        <tr>
+          <th scope="row">9:00 PM</th>
+          <td>{{TempFrcst.15}} °C</td>
+          <td>{{WindFrcst.15}} km/h</td>
+          <td>{{PrecpFrcst.15}} %</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
